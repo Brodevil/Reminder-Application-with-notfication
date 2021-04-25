@@ -21,9 +21,9 @@ def readExel(path):
             a = sheet_obj.cell(row=j, column=i)
             print(a.value)
             records.append(a.value)
-    print(records)
-    records = [[records[i-1], records[i]] for i in range(len(records))]
-    print(records)
+    records = [[records[i], records[i+1]] for i in range(0, len(records), 2)]
+    for i in records:
+        print(*i)
     
 
 
