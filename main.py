@@ -6,15 +6,19 @@ import xlrd
 
 
 def readExel(path):
+    workBook = xlrd.open_workbook(path)
+    sheet = workBook.sheet_by_index(0)
+    print(sheet.cell_value(0, 0))
+
+
+
+def reminder(data):
     pass
 
 
 def wordAPI(url):
     pass
 
-def reminder(data):
-    pass
-
 
 if __name__ == "__main__":
-    pass
+    readExel("Remind_data.xlsx")

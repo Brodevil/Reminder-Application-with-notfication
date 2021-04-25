@@ -1,0 +1,8 @@
+# Vs code file
+.vscode/
+
+# PyCharm files
+.idea/
+
+# Cached files
+__pycached__/
