@@ -1,4 +1,4 @@
-import time
+import datetime
 from plyer import notification
 import requests
 import json
@@ -12,11 +12,16 @@ def readExel(path):
     sheet_obj = wb_obj.active
     max_col = sheet_obj.max_column
     
+    records = dict()
+
     # Loop will print all columns name
-    for i in range(1, sheet_obj.max_row +1):
+    for j in range(1, sheet_obj.max_row +1):
         for i in range(1, max_col + 1):
-            cell_obj = sheet_obj.cell(row = 1, column = i)
-            print(cell_obj.value)
+            row_obj = sheet_obj.cell(row =j , column = i)
+
+            records.update({row_obj.value: row_obj.value})
+
+    print(records)
 
 
 def reminder(data):
