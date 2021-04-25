@@ -21,4 +21,4 @@ def wordAPI(url):
 
 
 if __name__ == "__main__":
-    readExel("Remind_data.xlsx")
+    readExel("M:\ADMIN\Critical Data\VS-Code\Reminder Application with Notification\Remind_data.xlsx")
