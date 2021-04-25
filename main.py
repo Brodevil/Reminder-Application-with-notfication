@@ -22,12 +22,9 @@ def readExel(path):
             print(a.value)
             records.append(a.value)
     print(records)
-    records = [[i, j] for index, i in enumerate(records) for num, j in enumerate(records) if index % 2 != 1  if num % 2!= 0]
+    records = [[records[i-1], records[i]] for i in range(len(records))]
     print(records)
-    for index, value in enumerate(records):
-        if index % 2 != 0:
-            del records[index]
-    print(records)
+    
 
 
 def reminder(data):
