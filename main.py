@@ -2,13 +2,17 @@ import time
 from plyer import notification
 import requests
 import json
-import xlrd
+import pandas as pd
+
 
 
 def readExel(path):
-    workBook = xlrd.open_workbook(path)
-    sheet = workBook.sheet_by_index(0)
-    print(sheet.cell_value(0, 0))
+    # xl_file = pd.ExcelFile(path)
+
+    df = pd.read_excel("Remind_data.xlsx", index_col=0)     
+    print(df.head()) # print the first 5 rows
+
+    # print(dfs)
 
 
 
