@@ -22,12 +22,14 @@ def readExel(path):
             print(a.value)
             records.append(a.value)
     records = [[records[i], records[i+1]] for i in range(0, len(records), 2)]
-    for i in records:
-        print(*i)
+    return records
     
 
 
 def reminder(data):
+    notification.notify(
+        
+    )
     pass
 
 
