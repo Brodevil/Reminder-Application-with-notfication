@@ -25,10 +25,18 @@ def readExel(path):
 
 
 def reminder(data):
-    print(data)
+    # print(data)
     while True:
         for time, pourpose in data:
-            if time == datetime.time()
+            time = datetime.datetime.strftime(time, '%H:%M:%S')
+            print(time, "exel ka time hai ye")
+            current_time = now = datetime.datetime.now().strftime("%H:%M:%S")
+            # print(current_time)
+            print(time < current_time)
+            if time == current_time:
+                print(pourpose)
+                break
+        break
 
         # notification.notify(
         #     title="Attempt 20-20-20 Eyes Exercise",
@@ -46,3 +54,4 @@ if __name__ == "__main__":
     # Giving the excel file's path as a parameters
     exel = readExel("M:\ADMIN\Critical Data\VS-Code\Reminder Application with Notification\Remind_data.xlsx")
     print(exel)
+    reminder(exel)
