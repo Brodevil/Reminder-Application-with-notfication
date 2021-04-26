@@ -31,13 +31,14 @@ def reminder(data):
         for time, pourpose in data:
             currentTime = datetime.time(int(datetime.datetime.now().strftime("%H")), int(datetime.datetime.now().strftime("%M")))
             if time == currentTime:
+                print(pourpose)
                 notification.notify(
                     title=pourpose,
-                    message="After every 20 minutes to give rest to your eyes see 20 meter long from your original distance in nature for 20 sec. Which defenatly safe the your eyes",
-                    app_icon=r"E:\ADMIN\Pictures\Saved Pictures\abhinav.ico",
+                    message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
+                    app_icon=r"Notification.ico",
                     timeout=12
                 )
-                time.speep(70)
+                time.sleep(70)
             
 
 
