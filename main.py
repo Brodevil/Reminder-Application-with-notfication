@@ -1,4 +1,5 @@
 import datetime
+import time
 from plyer import notification
 import requests
 import json
@@ -25,26 +26,25 @@ def readExel(path):
 
 
 def reminder(data):
-    # print(data)
+    print(data)
     while True:
         for time, pourpose in data:
-            time = datetime.datetime.strftime(time, '%H:%M:%S')
-            print(time, "exel ka time hai ye")
-            current_time = now = datetime.datetime.now().strftime("%H:%M:%S")
-            # print(current_time)
-            print(time < current_time)
-            if time == current_time:
-                print(pourpose)
-                break
-        break
+            currentTime = datetime.time(int(datetime.datetime.now().strftime("%H")), int(datetime.datetime.now().strftime("%M")))
+            if time == currentTime:
+                notification.notify(
+                    title=pourpose,
+                    message="After every 20 minutes to give rest to your eyes see 20 meter long from your original distance in nature for 20 sec. Which defenatly safe the your eyes",
+                    app_icon=r"E:\ADMIN\Pictures\Saved Pictures\abhinav.ico",
+                    timeout=12
+                )
+                time.speep(70)
+            
 
-        # notification.notify(
-        #     title="Attempt 20-20-20 Eyes Exercise",
-        #     message="After every 20 minutes to give rest to your eyes see 20 meter long from your original distance in nature for 20 sec. Which defenatly safe the your eyes",
-        #     app_icon=r"E:\ADMIN\Pictures\Saved Pictures\abhinav.ico",
-        #     timeout=12
-        # )
 
+
+        
+
+        
 
 def API(url):
     pass
