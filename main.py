@@ -29,7 +29,6 @@ def reminder(data):
         for excelTime, pourpose in data:
             currentTime = datetime.time(int(datetime.datetime.now().strftime("%H")), int(datetime.datetime.now().strftime("%M")))
             if excelTime == currentTime:
-                print(pourpose)
                 notification.notify(
                     title=pourpose,
                     message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
