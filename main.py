@@ -42,10 +42,20 @@ def reminder(data):
                 
 
 def API(url):
-    pass
+    querystring = {"term":"wat"}
+    headers = {
+        'x-rapidapi-key': "03aa284a3fmshda0df2e709f3afap11bcf0jsnf13dd3d99fbb",
+        'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com"
+        }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    import pprint
+    pprint.pprint(response.text)
 
 
 if __name__ == "__main__":
     # Giving the excel file's path as a parameters
-    exel = readExel("M:\ADMIN\Critical Data\VS-Code\Reminder Application with Notification\Remind_data.xlsx")
-    reminder(exel)
+    # exel = readExel("M:\ADMIN\Critical Data\VS-Code\Reminder Application with Notification\Remind_data.xlsx")
+    # reminder(exel)
+    url = r"https://mashape-community-urban-dictionary.p.rapidapi.com/define"
+    API(url)
