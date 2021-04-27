@@ -1,4 +1,5 @@
 # Reminder Application with notfication
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ![image](https://user-images.githubusercontent.com/75004567/116251218-184ea780-a78c-11eb-966e-9947daa0b1a1.png)
 <br>
