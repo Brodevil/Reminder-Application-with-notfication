@@ -8,12 +8,11 @@ import openpyxl
 
 def readExel(path):
     """Read the Exel file using openpyxl and return the 2d list as 1st will the time and 2nd will the purpose """
+
     # workbook object is created
     wb_obj = openpyxl.load_workbook(path)
-
     sheet_obj = wb_obj.active
     max_col = sheet_obj.max_column
-
     records = list()
 
     # Loop will print all columns name
@@ -26,23 +25,22 @@ def readExel(path):
 
 
 def reminder(data):
-    print(data)
+    """Funtion compare the time and just give notification if the saved time is same as the present time"""\
+
     while True:
         for time, pourpose in data:
             currentTime = datetime.time(int(datetime.datetime.now().strftime("%H")), int(datetime.datetime.now().strftime("%M")))
             if time == currentTime:
                 print(pourpose)
-                notification.notify(
-                    title=pourpose,
-                    message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
-                    app_icon=r"Notification.ico",
-                    timeout=12
-                )
+                # notification.notify(
+                #     title=pourpose,
+                #     message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
+                #     app_icon=r"Notification.ico",
+                #     timeout=12
+                # )
+                time.sleep(60)
+                print("Time 60 sec kelea ruk gaya tha abb start hoo gaya phir se")
                 
-                
-            
-
-        
 
 def API(url):
     pass
