@@ -1,3 +1,5 @@
+# Python 3.8.7 Version recommended
+
 # Need to install
 opencv-python==4.5.1.48
 plyer==2.0.0
