@@ -7,6 +7,5 @@ plyer==2.0.0
 # used inbuild modules
 datetime
 time
-json
-requests
+
 
