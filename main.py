@@ -48,5 +48,4 @@ def API(url):
 if __name__ == "__main__":
     # Giving the excel file's path as a parameters
     exel = readExel("M:\ADMIN\Critical Data\VS-Code\Reminder Application with Notification\Remind_data.xlsx")
-    print(exel)
     reminder(exel)
