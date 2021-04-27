@@ -1,5 +1,5 @@
 import datetime
-import time
+import time 
 from plyer import notification
 import requests
 import json
@@ -28,18 +28,17 @@ def reminder(data):
     """Funtion compare the time and just give notification if the saved time is same as the present time"""\
 
     while True:
-        for time, pourpose in data:
+        for excelTime, pourpose in data:
             currentTime = datetime.time(int(datetime.datetime.now().strftime("%H")), int(datetime.datetime.now().strftime("%M")))
-            if time == currentTime:
+            if excelTime == currentTime:
                 print(pourpose)
-                # notification.notify(
-                #     title=pourpose,
-                #     message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
-                #     app_icon=r"Notification.ico",
-                #     timeout=12
-                # )
-                time.sleep(60)
-                print("Time 60 sec kelea ruk gaya tha abb start hoo gaya phir se")
+                notification.notify(
+                    title=pourpose,
+                    message="Sir, You should do your work at the time and plz don't waste the time sir as, A time is a important role in the programmer life. Keep practicing.",
+                    app_icon=r"Notification.ico",
+                    timeout=12
+                )
+                time.sleep(62)
                 
 
 def API(url):
