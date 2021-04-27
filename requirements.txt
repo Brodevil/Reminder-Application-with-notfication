@@ -1,0 +1,10 @@
+# Need to install
+opencv-python==4.5.1.48
+plyer==2.0.0
+
+# used inbuild modules
+datetime
+time
+json
+requests
+
