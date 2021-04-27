@@ -38,12 +38,9 @@ def reminder(data):
                     app_icon=r"Notification.ico",
                     timeout=12
                 )
-                time.sleep(70)
+                
+                
             
-
-
-
-        
 
         
 
